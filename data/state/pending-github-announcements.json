@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "pipavlo82",
-    "event_id": "github-announcement:pr_merged:1739f5e7f962e198635ba977",
-    "kind": "pr_merged",
-    "number": 65,
-    "occurred_at": "2026-10-11T20:26:34Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "conformance: reject empty mutation/control inventories"
-  },
-  {
     "author_login": "babyblueviper1",
     "event_id": "github-announcement:pr_updated:1ec8af2af1c1fc9ff9540624",
     "kind": "pr_updated",
