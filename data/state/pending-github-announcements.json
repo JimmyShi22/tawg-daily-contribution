@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_merged:633ac1fd26fd6f157f5e1fbe",
-    "kind": "pr_merged",
-    "number": 62,
-    "occurred_at": "2026-10-10T23:45:49Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "scan-subject-binding-v0: README said 10 cases, suite has 12 — and c7 was undocumented"
-  },
-  {
     "author_login": "zexoverz",
     "event_id": "github-announcement:pr_merged:26f4ce586eb3d06e6d2d3098",
     "kind": "pr_merged",
