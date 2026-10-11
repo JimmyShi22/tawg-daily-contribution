@@ -8,5 +8,15 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
+  },
+  {
+    "author_login": "pipavlo82",
+    "event_id": "github-announcement:pr_opened:1622b9fb63a5136a978adcfe",
+    "kind": "pr_opened",
+    "number": 65,
+    "occurred_at": "2026-10-11T01:47:44Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "conformance: reject empty mutation/control inventories"
   }
 ]
