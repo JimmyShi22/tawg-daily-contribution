@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "zexoverz",
-    "event_id": "github-announcement:pr_merged:26f4ce586eb3d06e6d2d3098",
-    "kind": "pr_merged",
-    "number": 64,
-    "occurred_at": "2026-10-10T23:45:53Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "pq-key-binding-v1: pin rotation, the revocation gap and t == C"
   }
 ]
