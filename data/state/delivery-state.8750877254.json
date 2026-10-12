@@ -713,5 +713,24 @@
       5375
     ],
     "updated_at": "2026-10-09T10:52:06.853527Z"
+  },
+  {
+    "content_sha256": "aced28afd7a1352ec66e8fc06410223a02434f2630b6f267cb0aea4bdd99724f",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "reply:8750877254:tg:tawg:5432",
+    "destination": "tawg",
+    "job_id": "reply:8750877254:tg:tawg:5432",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-12T00:16:07.943141Z",
+    "reply_text": "Good morning, Jimmy! ☀️ Hope the WHIR optimization work goes smoothly today.",
+    "reply_to_message_id": 5432,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-12T00:16:07.943141Z"
   }
 ]
