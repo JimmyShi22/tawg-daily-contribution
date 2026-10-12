@@ -4051,6 +4051,25 @@
     "updated_at": "2026-09-08T15:50:22.890521Z"
   },
   {
+    "content_sha256": "0156eed71e1a337420a642b9528b3a983310017626f8a05136ad0e4a109a9174",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:a3b8648ce4d3116fdb22ace4",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:a3b8648ce4d3116fdb22ace4",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-12T13:05:48.163466Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#67 conformance: reject empty self-grading corpora](https://github.com/trustless-ai/recompute-kit/pull/67)\nOpened by [pipavlo82](https://github.com/pipavlo82)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-12T13:05:48.163466Z"
+  },
+  {
     "content_sha256": "0c857018cabf14bb461213a84e177158ce7e1df49d93ee4dc5b5f08250ba2a13",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_opened:a77b1df0a59686c269939686",
