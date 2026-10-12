@@ -2287,6 +2287,25 @@
     "updated_at": "2026-10-01T11:26:04.422875Z"
   },
   {
+    "content_sha256": "fcf8912171985bd1eb2ba4c4e7590833d14bc685a49f87b7e41b1117687482cd",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:91cf8cd7691929b4d92d8533",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:91cf8cd7691929b4d92d8533",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-12T09:00:31.087844Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#66 tools: discover mutation-inventory suites instead of listing them](https://github.com/trustless-ai/recompute-kit/pull/66)\nCongratulations, [babyblueviper1](https://github.com/babyblueviper1)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-12T09:00:31.087844Z"
+  },
+  {
     "content_sha256": "ec67122a7f8bb3197d7a05d9d62e0ec9e089b8b0e3a150aa6e60391db34cf6f4",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:9596bae01c3d02e033393f72",
