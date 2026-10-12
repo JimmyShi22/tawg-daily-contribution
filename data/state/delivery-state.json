@@ -8723,5 +8723,26 @@
     "telegram_chat_id": null,
     "telegram_message_ids": [],
     "updated_at": "2026-10-09T10:52:37.739008Z"
+  },
+  {
+    "content_sha256": "80e48b2bb52898c0309ff608fe0fe4c7037e8937b4d4dd5cac3a6c2b445d9505",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "reply:tg:tawg:5432",
+    "destination": "tawg",
+    "job_id": "reply:tg:tawg:5432",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-12T00:16:08.380751Z",
+    "reply_text": "Good morning, Jimmy! ☀️ Hope the WHIR optimization work goes well today — take the time you need on it.",
+    "reply_to_message_id": 5432,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-12T00:16:08.380751Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5433
+    ],
+    "updated_at": "2026-10-12T00:16:08.380751Z"
   }
 ]
