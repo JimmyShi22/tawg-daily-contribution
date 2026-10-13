@@ -8,5 +8,25 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
+  },
+  {
+    "author_login": "babyblueviper1",
+    "event_id": "github-announcement:pr_merged:62cb2cd1e2d7d782d5d54816",
+    "kind": "pr_merged",
+    "number": 69,
+    "occurred_at": "2026-10-13T19:41:56Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "run_conformance: declared runtime deps are a precondition, checked before execution"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_updated:cf81279bba2d09afdd62a3b0",
+    "kind": "pr_updated",
+    "number": 70,
+    "occurred_at": "2026-10-13T19:48:59Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "mutation-survival: observation control, all-probe inventories, and refutation over absence"
   }
 ]
