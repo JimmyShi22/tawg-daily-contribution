@@ -3988,6 +3988,27 @@
     "updated_at": "2026-09-01T12:15:16.502916Z"
   },
   {
+    "content_sha256": "0fc04a9200670cf87750fcbdc3a776e709ece3fcbd3698648b300cfa3bf60e63",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:86c73cb5e14f15b08d0b02de",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:86c73cb5e14f15b08d0b02de",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-13T19:35:32.821273Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#70 mutation-survival: observation control, all-probe inventories, and refutation over absence](https://github.com/trustless-ai/recompute-kit/pull/70)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-13T19:35:32.821273Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5471
+    ],
+    "updated_at": "2026-10-13T19:35:32.821273Z"
+  },
+  {
     "content_sha256": "12563009899948c315b87ae787b071488e129a0d5483cca0a0e0ea647f28ec2e",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_opened:8ba84493b1c22c23a11ec870",
@@ -5477,6 +5498,27 @@
       5216
     ],
     "updated_at": "2026-10-04T11:40:09.770210Z"
+  },
+  {
+    "content_sha256": "956188de89b8106b5c1eb3beb541e5f4df00dff23c16b096e66f23cc13805472",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_updated:72a308f092026a771437bc1f",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_updated:72a308f092026a771437bc1f",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-13T19:35:32.821273Z",
+    "reply_text": "🔄 **PR updated** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#69 run\\_conformance: declared runtime deps are a precondition, checked before execution](https://github.com/trustless-ai/recompute-kit/pull/69)\nNew commits from [babyblueviper1](https://github.com/babyblueviper1)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-13T19:35:32.821273Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5470
+    ],
+    "updated_at": "2026-10-13T19:35:32.821273Z"
   },
   {
     "content_sha256": "b6a40ee9749c791f0c46b0b2253df3ae5fc38fdc3cdcc2ef61fa2ff73b7fa210",
