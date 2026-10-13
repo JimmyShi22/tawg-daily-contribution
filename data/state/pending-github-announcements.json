@@ -11,16 +11,6 @@
   },
   {
     "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_merged:ca5642b4e8a777cc3ccea382",
-    "kind": "pr_merged",
-    "number": 68,
-    "occurred_at": "2026-10-13T18:49:23Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "mutation-survival: execute the bytes we wrote; refuse an empty inventory"
-  },
-  {
-    "author_login": "TMerlini",
     "event_id": "github-announcement:pr_updated:d999a34a2ff471c36cfec1cb",
     "kind": "pr_updated",
     "number": 17,
