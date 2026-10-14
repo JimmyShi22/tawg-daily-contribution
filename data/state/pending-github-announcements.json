@@ -8,5 +8,65 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
+  },
+  {
+    "author_login": "zexoverz",
+    "event_id": "github-announcement:pr_merged:e2350af86578474edb9597b4",
+    "kind": "pr_merged",
+    "number": 15,
+    "occurred_at": "2026-10-14T10:12:19Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "conformance: cover dex-calldata-v0 with a hermetic gate"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_merged:862f405851ef39dd3a5ae0d6",
+    "kind": "pr_merged",
+    "number": 19,
+    "occurred_at": "2026-10-14T10:21:30Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "docs(README): document per-suite hash-pinned conformance + fix MCP tool count"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
+    "kind": "issue_opened",
+    "number": 72,
+    "occurred_at": "2026-10-14T10:22:02Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "bin/conformance-suite: KeyError on multi-check manifests, and it exits 1 so \"cannot read\" reads as \"refuted\""
+  },
+  {
+    "author_login": "pipavlo82",
+    "event_id": "github-announcement:pr_merged:0d276991bdef878b37d85102",
+    "kind": "pr_merged",
+    "number": 29,
+    "occurred_at": "2026-10-14T10:27:28Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "docs: map coordinated basis-points completion"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_opened:56c4352f48521b1b9c4a475d",
+    "kind": "pr_opened",
+    "number": 73,
+    "occurred_at": "2026-10-14T10:38:21Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
+    "kind": "issue_opened",
+    "number": 74,
+    "occurred_at": "2026-10-14T10:39:12Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "pq-key-binding-v0: the UNVERIFIABLE lane has vectors but no manifest entry, so nothing runs it (@blockbird)"
   }
 ]
