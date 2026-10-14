@@ -3022,6 +3022,25 @@
     "updated_at": "2026-10-01T08:50:52.183103Z"
   },
   {
+    "content_sha256": "148a5ddd54d68de2205222ce74b4145de57412c93f279faab430087067d4b833",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:d548bb735615d038335094d0",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:d548bb735615d038335094d0",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:45:13.036450Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#71 mutation-survival: the rest of the #17 review fixups, on #70](https://github.com/trustless-ai/recompute-kit/pull/71)\nCongratulations, [zexoverz](https://github.com/zexoverz)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T11:45:13.036450Z"
+  },
+  {
     "content_sha256": "dc00321ec66a55944de3f858492469e12d310d8e7d807903d4e9635664caefc4",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:d9f7d0a8c40fb1ebcc0a6e55",
