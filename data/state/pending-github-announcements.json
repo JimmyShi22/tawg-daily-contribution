@@ -11,16 +11,6 @@
   },
   {
     "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_opened:56c4352f48521b1b9c4a475d",
-    "kind": "pr_opened",
-    "number": 73,
-    "occurred_at": "2026-10-14T10:38:21Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10"
-  },
-  {
-    "author_login": "TMerlini",
     "event_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
     "kind": "issue_opened",
     "number": 74,
