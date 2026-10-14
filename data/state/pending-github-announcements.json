@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "babyblueviper1",
-    "event_id": "github-announcement:pr_updated:08c6cce8e6f50077da3b0d81",
-    "kind": "pr_updated",
-    "number": 52,
-    "occurred_at": "2026-10-14T10:47:48Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "run_conformance: report a stale uncovered.json entry for multi-check suites too"
-  },
-  {
     "author_login": "TMerlini",
     "event_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
     "kind": "pr_merged",
