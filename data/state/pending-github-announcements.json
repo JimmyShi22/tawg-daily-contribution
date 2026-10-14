@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "zexoverz",
-    "event_id": "github-announcement:pr_merged:e2350af86578474edb9597b4",
-    "kind": "pr_merged",
-    "number": 15,
-    "occurred_at": "2026-10-14T10:12:19Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "conformance: cover dex-calldata-v0 with a hermetic gate"
-  },
-  {
     "author_login": "TMerlini",
     "event_id": "github-announcement:pr_merged:862f405851ef39dd3a5ae0d6",
     "kind": "pr_merged",
