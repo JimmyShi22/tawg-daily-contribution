@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_opened:7e43cdb47c47348bcd1893a4",
-    "kind": "pr_opened",
-    "number": 81,
-    "occurred_at": "2026-10-14T17:01:13Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "tools: account for every hash and address quoted in a .md"
   }
 ]
