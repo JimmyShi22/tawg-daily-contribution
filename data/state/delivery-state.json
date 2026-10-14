@@ -6569,6 +6569,25 @@
     "updated_at": "2026-10-13T19:05:26.808166Z"
   },
   {
+    "content_sha256": "93d783742febd6dacefde41c26ca8344cddad1f1bc61146195df55093aae93bd",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_updated:daac44f722280a3e48636bc0",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_updated:daac44f722280a3e48636bc0",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:45:13.036450Z",
+    "reply_text": "🔄 **PR updated** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#70 mutation-survival: observation control, all-probe inventories, and refutation over absence](https://github.com/trustless-ai/recompute-kit/pull/70)\nNew commits from [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T11:45:13.036450Z"
+  },
+  {
     "content_sha256": "af1deb799bdcfe2078d4ddf1eb16bf9be77ff8c4cb65330f06b6e9965166170c",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_updated:dbe712adc7e9f1027b1f84a7",
