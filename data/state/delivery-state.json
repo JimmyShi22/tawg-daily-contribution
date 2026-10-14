@@ -1258,6 +1258,25 @@
     "updated_at": "2026-10-01T14:30:54.318408Z"
   },
   {
+    "content_sha256": "5005351a5391bede13b03c9f482773098a0a169c87ef84afe23ac4db804256a2",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:8a7a2ea04f4e0a8fef27b616",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:8a7a2ea04f4e0a8fef27b616",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T14:55:13.297391Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#79 Adapters: a case that cannot be graded is reported as a refuted vector \\(exit 1\\), not could-not-grade \\(exit 2\\)](https://github.com/trustless-ai/recompute-kit/issues/79)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T14:55:13.297391Z"
+  },
+  {
     "content_sha256": "3044ba1e36e694509af649be985217db2756d8047fae309bab385752560d780d",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
