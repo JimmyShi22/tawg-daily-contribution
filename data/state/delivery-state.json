@@ -1846,6 +1846,25 @@
     "updated_at": "2026-09-05T20:25:12.451044Z"
   },
   {
+    "content_sha256": "4caba53779161483cd9468ad7d293f71e091d351ca6708047f2c1bc095b32e37",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#73 pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10](https://github.com/trustless-ai/recompute-kit/pull/73)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
+  },
+  {
     "content_sha256": "48b277462a1b1a68daa224b9e528bdcbe6a26eb460f7cfc5fc53aa7e3629be24",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:4d43253ff1f7ba9818d0961b",
