@@ -1216,6 +1216,25 @@
     "updated_at": "2026-09-07T06:15:14.227903Z"
   },
   {
+    "content_sha256": "7a892ff32caaacfaf1ab65179b8761e69bab090485ad160b5dde73a9efffba59",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#76 test\\_self\\_grading\\_nonempty: CHECKS pins 21 case counts by hand, so adding a vector reds it with a message about a number](https://github.com/trustless-ai/recompute-kit/issues/76)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
+  },
+  {
     "content_sha256": "e454f7a73482f93b760a1b98eadb64f2bf8b4ebc069e508ff5199ac1d8bce56c",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:issue_opened:88df1d5623d17d893d5006f1",
