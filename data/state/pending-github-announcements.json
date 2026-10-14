@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
-    "kind": "issue_opened",
-    "number": 72,
-    "occurred_at": "2026-10-14T10:22:02Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "bin/conformance-suite: KeyError on multi-check manifests, and it exits 1 so \"cannot read\" reads as \"refuted\""
-  },
-  {
     "author_login": "pipavlo82",
     "event_id": "github-announcement:pr_merged:0d276991bdef878b37d85102",
     "kind": "pr_merged",
