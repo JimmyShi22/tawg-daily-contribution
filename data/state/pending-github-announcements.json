@@ -11,16 +11,6 @@
   },
   {
     "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_merged:862f405851ef39dd3a5ae0d6",
-    "kind": "pr_merged",
-    "number": 19,
-    "occurred_at": "2026-10-14T10:21:30Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "docs(README): document per-suite hash-pinned conformance + fix MCP tool count"
-  },
-  {
-    "author_login": "TMerlini",
     "event_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
     "kind": "issue_opened",
     "number": 72,
