@@ -1216,6 +1216,27 @@
     "updated_at": "2026-09-07T06:15:14.227903Z"
   },
   {
+    "content_sha256": "7a892ff32caaacfaf1ab65179b8761e69bab090485ad160b5dde73a9efffba59",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#76 test\\_self\\_grading\\_nonempty: CHECKS pins 21 case counts by hand, so adding a vector reds it with a message about a number](https://github.com/trustless-ai/recompute-kit/issues/76)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T11:15:08.760236Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5503
+    ],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
+  },
+  {
     "content_sha256": "e454f7a73482f93b760a1b98eadb64f2bf8b4ebc069e508ff5199ac1d8bce56c",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:issue_opened:88df1d5623d17d893d5006f1",
@@ -1846,6 +1867,27 @@
     "updated_at": "2026-09-05T20:25:12.451044Z"
   },
   {
+    "content_sha256": "4caba53779161483cd9468ad7d293f71e091d351ca6708047f2c1bc095b32e37",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#73 pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10](https://github.com/trustless-ai/recompute-kit/pull/73)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T11:15:08.760236Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5501
+    ],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
+  },
+  {
     "content_sha256": "48b277462a1b1a68daa224b9e528bdcbe6a26eb460f7cfc5fc53aa7e3629be24",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:4d43253ff1f7ba9818d0961b",
@@ -2033,6 +2075,27 @@
       5474
     ],
     "updated_at": "2026-10-13T20:05:43.277668Z"
+  },
+  {
+    "content_sha256": "9c7519dfe77734dc47d7659486cb593d3d2f34accafa857ecefbbec2ca0ed767",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#75 tools: carry the rotation case count forward to 8 \\(main is red\\)](https://github.com/trustless-ai/recompute-kit/pull/75)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T11:15:08.760236Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5502
+    ],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
   },
   {
     "content_sha256": "64abf812bef71e740a1f00d2203fe5077a4894e0347506821e19e287dbd03cd4",
@@ -4721,6 +4784,27 @@
       4888
     ],
     "updated_at": "2026-09-24T17:40:37.765999Z"
+  },
+  {
+    "content_sha256": "dd2b5a7fb6e598eb44e56f5cdd3d8d6cb8ea7c902a681da05706eccda90ae66f",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_updated:08c6cce8e6f50077da3b0d81",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_updated:08c6cce8e6f50077da3b0d81",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🔄 **PR updated** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#52 run\\_conformance: report a stale uncovered.json entry for multi-check suites too](https://github.com/trustless-ai/recompute-kit/pull/52)\nNew commits from [babyblueviper1](https://github.com/babyblueviper1)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T11:15:08.760236Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5500
+    ],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
   },
   {
     "content_sha256": "2914a98647f2f7e762f67743de45abf0be7a96abba9af0623365a1827dbae2cc",
