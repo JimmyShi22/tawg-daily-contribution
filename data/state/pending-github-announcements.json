@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
-    "kind": "issue_opened",
-    "number": 74,
-    "occurred_at": "2026-10-14T10:39:12Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "pq-key-binding-v0: the UNVERIFIABLE lane has vectors but no manifest entry, so nothing runs it (@blockbird)"
   }
 ]
