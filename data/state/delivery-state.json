@@ -1111,6 +1111,27 @@
     "updated_at": "2026-10-13T23:16:52.736069Z"
   },
   {
+    "content_sha256": "55a34e3fabecc5ca139d8cf7340b9002174be4516c5ec3182889937c19f2a214",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "daily:2026-10-14T23:00:00Z",
+    "destination": "tawg",
+    "job_id": "daily:2026-10-14T23:00:00Z",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-14T23:00:21.665183Z",
+    "reply_text": "🗓 **TAWG Daily Catch-up**\n_2026-10-13 23:00 → 2026-10-14 23:00 UTC_\n\n## ⚡ **Highlights**\n\n> **Mutation harness deployed** — survival count dropped from 10 of 56 to 4 after PR #64, giving the team a concrete, reproducible coverage baseline. [tg:tawg:5488]\n\n> **Integration audit passed** — PRs #17, #70, and #71 cleared an independent composition check with no new blockers found. [tg:tawg:5499]\n\n> **Cold clone re-run validated on forum** — reproducibility was confirmed from a fresh checkout and vector 12 was identified as the key case for focused attention. [post 417](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098/417)\n\n## 🤝 **What moved**\n\n### mutation-testing\n_Mutation coverage tightened substantially and gap classification moved forward._\n\n- Zexo (@zexoverz) **Shipped** a mutation harness with full before-and-after logs showing PR #64 reduced surviving mutants from 10 of 56 to 4, giving the group a quantified and reproducible measure of the coverage gained. [tg:tawg:5488]\n- Pavlo (@pavlentyy82) **Called** that mutation-survival-v0 belongs in REDS_ON_EMPTY because it holds a ZERO_CASES guard without a complete result summary, and asked that the declaration be added on the next rebase so the gap is formally tracked rather than left implicit. [tg:tawg:5516]\n- Zexo (@zexoverz) **Confirmed** consent for their name on an external application scoped to the recompute-kit conformance work they reviewed, keeping any outside attribution accurate and bounded to actual contribution. [tg:tawg:5517]\n\n### integration-audit\n_The combined composition check concluded cleanly._\n\n- Pavlo (@pavlentyy82) **Completed** a final independent integration audit of PRs #17, #70, and #71 against main, returning PASS_SCOPED_INTEGRATION with no new composition blockers and clearing those changes to move forward. [tg:tawg:5499]\n\n### ERC-8004 forum\n_External verification and a grounding discussion reference both extended the shared record._\n\n- Baby Blue Viper re-ran the full setup from a cold clone to confirm reproducibility, and the thread acknowledged vector 12 as the case warranting focused attention, sharpening the review scope for the group. [post 417](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098/417)\n- A data point on the reputation registry was shared in the grounding discussion, offering a concrete reference for how a registry might apply in the next protocol version. [post 418](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098/418)\n\n### organization\n_Attribution for an external application was handled with transparency._\n\n- Merlini (@gobross) **Clarified** that a name mention appeared inside a private badge questionnaire rather than any public post, giving the group accurate context for how the reference occurred. [tg:tawg:5491]\n- Zexo (@zexoverz) **Asked** for the exact scope of an external application before agreeing to be named, ensuring that any attribution accurately reflects their contribution to the group's work. [tg:tawg:5489]\n\n## 🚀 **Next up**\n\n### 💡 **Ideas to follow**\n- Explore whether the vector 12 finding warrants a targeted spec note or implementation guard\n- Consider how the reputation registry data point fits the protocol's next grounding discussion\n\n### ✅ **TODOs**\n- Add the mutation-survival-v0 REDS_ON_EMPTY declaration during the next rebase\n- Confirm PRs #17, #70, and #71 can advance now that the integration audit has cleared\n\n## 🤖 **Trusty's take**\n\n> **Today's spark:** A mutation harness went live, the numbers came in, a classification call followed immediately, and a rebase action item was already queued — one tight loop from measurement to formal gap tracking.\n>\n> When the test suite starts speaking in numbers, the whole team gets to think in numbers too. 📊",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T23:00:21.665183Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5523
+    ],
+    "updated_at": "2026-10-14T23:00:21.665183Z"
+  },
+  {
     "content_sha256": "a466980af20249b60477ac2f3235c5ea85d2023ddef606a63eb3044863a8eea3",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "daily:preview-rich-v1:2026-08-27T23:00:00Z",
