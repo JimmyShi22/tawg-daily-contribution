@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "zexoverz",
-    "event_id": "github-announcement:pr_merged:d548bb735615d038335094d0",
-    "kind": "pr_merged",
-    "number": 71,
-    "occurred_at": "2026-10-14T11:42:05Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "mutation-survival: the rest of the #17 review fixups, on #70"
-  },
-  {
     "author_login": "TMerlini",
     "event_id": "github-announcement:pr_updated:daac44f722280a3e48636bc0",
     "kind": "pr_updated",
