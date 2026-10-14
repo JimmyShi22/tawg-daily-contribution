@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
-    "kind": "issue_opened",
-    "number": 76,
-    "occurred_at": "2026-10-14T11:07:59Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "test_self_grading_nonempty: CHECKS pins 21 case counts by hand, so adding a vector reds it with a message about a number"
   }
 ]
