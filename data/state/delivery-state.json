@@ -4261,6 +4261,27 @@
     "updated_at": "2026-09-23T14:40:39.218983Z"
   },
   {
+    "content_sha256": "52b39f0ffd7992e287ac75e100b4e0307c3b57733f4a89bab77fe29b58cbf261",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:ac25808a8b6d7b7f82b30d22",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:ac25808a8b6d7b7f82b30d22",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T03:30:17.474223Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#71 mutation-survival: the rest of the #17 review fixups, on #70](https://github.com/trustless-ai/recompute-kit/pull/71)\nOpened by [zexoverz](https://github.com/zexoverz)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T03:30:17.474223Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5490
+    ],
+    "updated_at": "2026-10-14T03:30:17.474223Z"
+  },
+  {
     "content_sha256": "c131c98e732fd286fb5e72def21d338c51e26e6ee4c9cb879b74ce041a92f473",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_opened:b8d41a0935236e9ef7004b20",
