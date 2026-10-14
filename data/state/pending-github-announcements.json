@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_opened:0d9e9646c3ba0f014e7e0e22",
-    "kind": "pr_opened",
-    "number": 80,
-    "occurred_at": "2026-10-14T14:59:21Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "conformance-suite: refuse a manifest it cannot read, instead of calling it refuted"
   }
 ]
