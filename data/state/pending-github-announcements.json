@@ -8,5 +8,45 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
+  },
+  {
+    "author_login": "babyblueviper1",
+    "event_id": "github-announcement:pr_updated:08c6cce8e6f50077da3b0d81",
+    "kind": "pr_updated",
+    "number": 52,
+    "occurred_at": "2026-10-14T10:47:48Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "run_conformance: report a stale uncovered.json entry for multi-check suites too"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_merged:4bba9a14637954584af853e5",
+    "kind": "pr_merged",
+    "number": 73,
+    "occurred_at": "2026-10-14T10:57:11Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
+    "kind": "pr_merged",
+    "number": 75,
+    "occurred_at": "2026-10-14T11:05:37Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "tools: carry the rotation case count forward to 8 (main is red)"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
+    "kind": "issue_opened",
+    "number": 76,
+    "occurred_at": "2026-10-14T11:07:59Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "test_self_grading_nonempty: CHECKS pins 21 case counts by hand, so adding a vector reds it with a message about a number"
   }
 ]
