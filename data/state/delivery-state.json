@@ -2056,6 +2056,25 @@
     "updated_at": "2026-10-13T20:05:43.277668Z"
   },
   {
+    "content_sha256": "9c7519dfe77734dc47d7659486cb593d3d2f34accafa857ecefbbec2ca0ed767",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T11:15:08.760236Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#75 tools: carry the rotation case count forward to 8 \\(main is red\\)](https://github.com/trustless-ai/recompute-kit/pull/75)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T11:15:08.760236Z"
+  },
+  {
     "content_sha256": "64abf812bef71e740a1f00d2203fe5077a4894e0347506821e19e287dbd03cd4",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:633ac1fd26fd6f157f5e1fbe",
