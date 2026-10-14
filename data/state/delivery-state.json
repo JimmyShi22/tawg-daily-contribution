@@ -1174,6 +1174,25 @@
     "updated_at": "2026-08-31T12:01:11.481378Z"
   },
   {
+    "content_sha256": "f9eaf84363f5bcbe82fe619b65ca23fb718a8a49baaf6c9f47deb690fb912c2a",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#72 bin/conformance-suite: KeyError on multi-check manifests, and it exits 1 so \"cannot read\" reads as \"refuted\"](https://github.com/trustless-ai/recompute-kit/issues/72)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
+  },
+  {
     "content_sha256": "371c3338d9e3a5c7e49fb8db93698a7fac685bfd1d184d27f981df0eec0f290e",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:issue_opened:84093bc63690343094713032",
