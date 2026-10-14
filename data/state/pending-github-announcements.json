@@ -10,16 +10,6 @@
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
   },
   {
-    "author_login": "pipavlo82",
-    "event_id": "github-announcement:pr_merged:0d276991bdef878b37d85102",
-    "kind": "pr_merged",
-    "number": 29,
-    "occurred_at": "2026-10-14T10:27:28Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "docs: map coordinated basis-points completion"
-  },
-  {
     "author_login": "TMerlini",
     "event_id": "github-announcement:pr_opened:56c4352f48521b1b9c4a475d",
     "kind": "pr_opened",
