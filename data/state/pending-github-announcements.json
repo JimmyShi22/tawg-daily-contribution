@@ -11,16 +11,6 @@
   },
   {
     "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_merged:630da16946cde5da1fb4d2e4",
-    "kind": "pr_merged",
-    "number": 75,
-    "occurred_at": "2026-10-14T11:05:37Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "tools: carry the rotation case count forward to 8 (main is red)"
-  },
-  {
-    "author_login": "TMerlini",
     "event_id": "github-announcement:issue_opened:884e5f70a8dfa56132efe121",
     "kind": "issue_opened",
     "number": 76,
