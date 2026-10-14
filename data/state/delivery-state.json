@@ -1174,6 +1174,27 @@
     "updated_at": "2026-08-31T12:01:11.481378Z"
   },
   {
+    "content_sha256": "f9eaf84363f5bcbe82fe619b65ca23fb718a8a49baaf6c9f47deb690fb912c2a",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:39c301bd005304c59952bcad",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#72 bin/conformance-suite: KeyError on multi-check manifests, and it exits 1 so \"cannot read\" reads as \"refuted\"](https://github.com/trustless-ai/recompute-kit/issues/72)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5495
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
+  },
+  {
     "content_sha256": "371c3338d9e3a5c7e49fb8db93698a7fac685bfd1d184d27f981df0eec0f290e",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:issue_opened:84093bc63690343094713032",
@@ -1214,6 +1235,27 @@
       5111
     ],
     "updated_at": "2026-10-01T14:30:54.318408Z"
+  },
+  {
+    "content_sha256": "3044ba1e36e694509af649be985217db2756d8047fae309bab385752560d780d",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
+    "destination": "tawg",
+    "job_id": "github-announcement:issue_opened:cf333087b169c78c41a5dcb6",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🆕 **New issue** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#74 pq-key-binding-v0: the UNVERIFIABLE lane has vectors but no manifest entry, so nothing runs it \\(@blockbird\\)](https://github.com/trustless-ai/recompute-kit/issues/74)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5498
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
   },
   {
     "content_sha256": "1b89e3830ed1b4fcd7f62a48ad00f8f0d3f6277a82b669931593b4cae69b12d0",
@@ -1340,6 +1382,27 @@
       4747
     ],
     "updated_at": "2026-09-18T11:00:28.394158Z"
+  },
+  {
+    "content_sha256": "2c88f3e0c518c1767fda41ea598676db9698b6db45d808ded38a900d4b5f905d",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:0d276991bdef878b37d85102",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:0d276991bdef878b37d85102",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#29 docs: map coordinated basis-points completion](https://github.com/trustless-ai/recompute-kit/pull/29)\nCongratulations, [pipavlo82](https://github.com/pipavlo82)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5496
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
   },
   {
     "content_sha256": "382d9ccc3082025b58e209b78841e42c1ab547c93117a22cc6a4d7f7bd5a0285",
@@ -2308,6 +2371,27 @@
     "updated_at": "2026-09-06T17:40:14.303109Z"
   },
   {
+    "content_sha256": "2669ef61ec994cfd8a6cabdf90c6bdc6bb1df7de4faa5ef65d976ba83d430dd3",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:862f405851ef39dd3a5ae0d6",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:862f405851ef39dd3a5ae0d6",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#19 docs\\(README\\): document per-suite hash-pinned conformance + fix MCP tool count](https://github.com/trustless-ai/recompute-kit/pull/19)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5494
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
+  },
+  {
     "content_sha256": "ae91f3afadc09c6526af153419ff5649fa7797d31fafbb66956d89299caecef0",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:864154cf55b745837cc85728",
@@ -2978,6 +3062,27 @@
       4928
     ],
     "updated_at": "2026-09-25T21:50:11.748400Z"
+  },
+  {
+    "content_sha256": "824e4ce1602c00d0817e6017e993fd979e134236d240f444d61d58868e1419b1",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:e2350af86578474edb9597b4",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:e2350af86578474edb9597b4",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#15 conformance: cover dex-calldata-v0 with a hermetic gate](https://github.com/trustless-ai/recompute-kit/pull/15)\nCongratulations, [zexoverz](https://github.com/zexoverz)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5493
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
   },
   {
     "content_sha256": "65759af36e1abe4ac1b58f7b54e8f2c9917f57ee65c1fba13d005e846f286d41",
@@ -3713,6 +3818,27 @@
       5142
     ],
     "updated_at": "2026-10-02T02:45:43.040217Z"
+  },
+  {
+    "content_sha256": "2d7aa051f408a9fec58ad7136203b578e166154753fc88b4f10d6e4ed98d10ef",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:56c4352f48521b1b9c4a475d",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:56c4352f48521b1b9c4a475d",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-14T10:40:36.375332Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#73 pq-key-binding-v0/rotation: the before-rotation companion case, salvaged from #10](https://github.com/trustless-ai/recompute-kit/pull/73)\nOpened by [TMerlini](https://github.com/TMerlini)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-14T10:40:36.375332Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5497
+    ],
+    "updated_at": "2026-10-14T10:40:36.375332Z"
   },
   {
     "content_sha256": "4d735ea3ad7fc7a3461e28ea272a2d08e8e45329b3ab7e9c809d7b23e5b2591e",
