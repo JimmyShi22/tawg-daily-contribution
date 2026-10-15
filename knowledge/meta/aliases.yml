@@ -180,5 +180,11 @@ people:
     display_names:
     - 繁星之上
     handles: {}
+  繁星之上-2:
+    display_names:
+    - 繁星之上
+    handles:
+      telegram:
+      - onthe_stars
 schema: tawg.aliases.v1
 scope: tawg-only
