@@ -4672,10 +4672,12 @@
     "reply_to_message_id": null,
     "safe_error_code": null,
     "schema_version": "tawg.delivery-attempt.v1",
-    "sent_at": null,
-    "status": "sending",
-    "telegram_chat_id": null,
-    "telegram_message_ids": [],
+    "sent_at": "2026-10-15T10:30:43.397425Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5530
+    ],
     "updated_at": "2026-10-15T10:30:43.397425Z"
   },
   {
