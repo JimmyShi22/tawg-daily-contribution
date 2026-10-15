@@ -9689,5 +9689,24 @@
       5528
     ],
     "updated_at": "2026-10-15T07:41:14.480553Z"
+  },
+  {
+    "content_sha256": "7757cad8d04fc8aff0dcccd127befde3ac4fa5e8387beb29f28ea64b0b5d6a99",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "reply:tg:tawg:5531",
+    "destination": "tawg",
+    "job_id": "reply:tg:tawg:5531",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-15T10:50:00.635302Z",
+    "reply_text": "Good morning, Pavlo! ☀️ Hope it's a good one.",
+    "reply_to_message_id": 5531,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-15T10:50:00.635302Z"
   }
 ]
