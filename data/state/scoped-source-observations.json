@@ -91,11 +91,11 @@
     "updated_at": "2026-09-04T10:52:25Z"
   },
   {
-    "metadata_sha256": "e762debbf1f9de18a3c16a1d5086a9db539430c6a78130b07c313d677b233b38",
+    "metadata_sha256": "efb4debd77cef0ccc1c044a299fc45d30c908f3491d9153b350589fdf6a90fc8",
     "source_key": "recompute-kit",
     "source_kind": "github_repository",
     "source_locator": "https://github.com/trustless-ai/recompute-kit",
-    "updated_at": "2026-10-15T13:48:08Z"
+    "updated_at": "2026-10-15T14:16:09Z"
   },
   {
     "metadata_sha256": "3ca70fe18e4e62e8ea690138da610229ebfa681c3a23d3ddbfe9cd9112091551",
@@ -112,11 +112,11 @@
     "updated_at": "2026-09-07T22:29:47Z"
   },
   {
-    "metadata_sha256": "e157d2ded2e214b942d88c73fcab55d23713d3b09bf373b504ce9911a1f007b5",
+    "metadata_sha256": "56a73cff87194b723c20ade45859c882cec344f21a2bd0c180d54d7ba28ae696",
     "source_key": "tawg-daily-contribution",
     "source_kind": "github_repository",
     "source_locator": "https://github.com/trustless-ai/tawg-daily-contribution",
-    "updated_at": "2026-10-15T14:05:41Z"
+    "updated_at": "2026-10-15T14:35:53Z"
   },
   {
     "metadata_sha256": "1fa2d7d4e8c07715911f243a3626cc3528375db44ef9bc96454bdeb243b1a6c0",
