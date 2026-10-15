@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_opened:9c5203b63e9bc31cde55d4f0",
-    "kind": "pr_opened",
-    "number": 84,
-    "occurred_at": "2026-10-15T14:05:38Z",
-    "repository": "trustless-ai/recompute-kit",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "tools: every test in tools/ must be invoked, and every invocation must exist"
   }
 ]
