@@ -755,5 +755,24 @@
       5526
     ],
     "updated_at": "2026-10-15T00:42:39.219735Z"
+  },
+  {
+    "content_sha256": "a93b3db343a12b680e0c0193a235215b35b7760a4e427202e4b78984c022ed97",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "reply:8750877254:tg:tawg:5527",
+    "destination": "tawg",
+    "job_id": "reply:8750877254:tg:tawg:5527",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-15T07:41:18.787673Z",
+    "reply_text": "Good morning! ☀️ Hope it's a great one for you and the whole group.",
+    "reply_to_message_id": 5527,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-15T07:41:18.787673Z"
   }
 ]
