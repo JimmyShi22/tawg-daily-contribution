@@ -8,5 +8,15 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
+  },
+  {
+    "author_login": "TMerlini",
+    "event_id": "github-announcement:pr_merged:51e14a66e7865a98bd6a105c",
+    "kind": "pr_merged",
+    "number": 77,
+    "occurred_at": "2026-10-15T12:31:50Z",
+    "repository": "trustless-ai/recompute-kit",
+    "schema_version": "tawg.github-announcement.v1",
+    "title": "test_self_grading_nonempty: derive the case counts, and discover the checks"
   }
 ]
