@@ -4660,6 +4660,25 @@
     "updated_at": "2026-09-02T14:00:28.678616Z"
   },
   {
+    "content_sha256": "b9d2da023a0febaf0732169c5f277f7fee76ee5884706f920148b93b25508d58",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:ca2d56a21b313b364e2955fc",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:ca2d56a21b313b364e2955fc",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-15T10:30:43.397425Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/recompute-kit](https://github.com/trustless-ai/recompute-kit)\n[#82 scan-subject-binding-v0: a case with no expectation exits 2, not 1 \\(#79\\)](https://github.com/trustless-ai/recompute-kit/pull/82)\nOpened by [babyblueviper1](https://github.com/babyblueviper1)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-15T10:30:43.397425Z"
+  },
+  {
     "content_sha256": "586d3a4b5d945ca89edeb7788c810706ecfee83276accc7ce46b17ad51a6a4bb",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_opened:cd3cb2468315dccf98dbf905",
