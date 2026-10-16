@@ -7367,6 +7367,25 @@
     "updated_at": "2026-09-02T15:00:38.254404Z"
   },
   {
+    "content_sha256": "52ffdc5450f4b625ac96b69012475e4567e95e93a94dc754368138a10bccbc88",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "member-introduction:繁星之上-2",
+    "destination": "tawg",
+    "job_id": "member-introduction:繁星之上-2",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-16T00:56:31.293607Z",
+    "reply_text": "@OnThe_Stars — welcome! 🌟\n\nTrustless AI came together organically from people scattered across open-source projects, ERC work, and hackathons — builders, researchers, protocol reviewers, EIP authors — who kept finding each other and realised they were all pulling in the same direction: away from \"trust me\" and toward AI and blockchain results that anyone can independently inspect, verify, or recompute.\n\nSomething you said stuck with me: *\"the property we're showing is the verification rule and the evidence boundary — whoever's standing there presenting it is incidental.\"* That's not just a good demo instinct, that's basically the group's whole thesis in one sentence. You're going to fit right in here.\n\nNo ceremony needed to participate. Jump into a thread, share what you're working on, push back on something, or ask what's been happening while you were away — there's been plenty of movement lately. Really glad you're back in the mix. 🙌",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-16T00:56:31.293607Z"
+  },
+  {
     "content_sha256": "ebfea3d16c6abc72e8ed2bb99d638e6cbab192ff136b816211c28077daef2627",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "member-welcome:filip-blagojević",
