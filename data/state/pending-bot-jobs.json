@@ -87,6 +87,35 @@
     "welcome_target_record_id": "tg:tawg:4049"
   },
   {
+    "attempts": 0,
+    "classified_route": null,
+    "created_at": "2026-10-16T00:56:15.279062Z",
+    "job_id": "member-introduction:繁星之上-2",
+    "message_thread_id": null,
+    "prepared_attachments": [],
+    "prepared_citations": [],
+    "prepared_language": null,
+    "prepared_reply_text": null,
+    "prerequisite_job_id": "member-welcome:繁星之上-2",
+    "refusal": false,
+    "repair_of_job_id": null,
+    "repair_reason_code": null,
+    "reply_to_message_id": null,
+    "routed_at": null,
+    "router_context_scope": null,
+    "router_context_sha256": null,
+    "router_version": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.pending-bot-job.v1",
+    "status": "pending",
+    "trigger_kind": "member_introduction",
+    "trigger_record_id": "tg:tawg:5553",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
+    "verification_artifact": null,
+    "welcome_target_person_id": "繁星之上-2",
+    "welcome_target_record_id": "tg:tawg:5552"
+  },
+  {
     "attempts": 1,
     "classified_route": "coordination",
     "created_at": "2026-09-08T10:03:12.414151Z",
@@ -187,6 +216,40 @@
     "verification_artifact": null,
     "welcome_target_person_id": "ryan-veteze",
     "welcome_target_record_id": "tg:tawg:4049"
+  },
+  {
+    "attempts": 1,
+    "classified_route": "coordination",
+    "created_at": "2026-10-16T00:56:15.279062Z",
+    "job_id": "member-welcome:繁星之上-2",
+    "knowledge_mutation_paths": [
+      "knowledge/acknowledgements/繁星之上-2.md",
+      "knowledge/index.md"
+    ],
+    "knowledge_mutation_trigger_sha256": "99c459c5d859e570e76947c607293a6a6cfb53084298798b20860f5bc50f9b0a",
+    "message_thread_id": null,
+    "prepared_attachments": [],
+    "prepared_citations": [],
+    "prepared_language": "en",
+    "prepared_reply_text": "@OnThe_Stars Welcome to Trustless AI! 👋",
+    "prerequisite_job_id": null,
+    "refusal": false,
+    "repair_of_job_id": null,
+    "repair_reason_code": null,
+    "reply_to_message_id": null,
+    "routed_at": "2026-10-16T00:56:15.279062Z",
+    "router_context_scope": "conversation",
+    "router_context_sha256": "ace0270dba844e9356fbb8bff9d1397a7d9425b868546a9f279bfc110a7545ad",
+    "router_version": "template-member-welcome-v1",
+    "safe_error_code": null,
+    "schema_version": "tawg.pending-bot-job.v1",
+    "status": "delivered",
+    "trigger_kind": "member_welcome",
+    "trigger_record_id": "tg:tawg:5553",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
+    "verification_artifact": null,
+    "welcome_target_person_id": "繁星之上-2",
+    "welcome_target_record_id": "tg:tawg:5552"
   },
   {
     "attempts": 2,
@@ -5646,7 +5709,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 8139,
+    "attempts": 8140,
     "classified_route": null,
     "created_at": "2026-09-21T00:51:10.379022Z",
     "job_id": "reply:tg:tawg:4787",
@@ -5669,7 +5732,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:4787",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6226,7 +6289,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 4489,
+    "attempts": 4490,
     "classified_route": null,
     "created_at": "2026-09-27T02:41:17.679628Z",
     "job_id": "reply:tg:tawg:4955",
@@ -6249,7 +6312,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:4955",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6458,7 +6521,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 3247,
+    "attempts": 3248,
     "classified_route": null,
     "created_at": "2026-09-30T17:22:22.155411Z",
     "job_id": "reply:tg:tawg:5058",
@@ -6481,13 +6544,13 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5058",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
   },
   {
-    "attempts": 3244,
+    "attempts": 3245,
     "classified_route": null,
     "created_at": "2026-09-30T17:39:17.676429Z",
     "job_id": "reply:tg:tawg:5060",
@@ -6510,7 +6573,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5060",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6632,7 +6695,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 2487,
+    "attempts": 2488,
     "classified_route": null,
     "created_at": "2026-10-03T06:35:21.705049Z",
     "job_id": "reply:tg:tawg:5168",
@@ -6655,7 +6718,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5168",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6893,7 +6956,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 1803,
+    "attempts": 1804,
     "classified_route": null,
     "created_at": "2026-10-06T03:54:29.858870Z",
     "job_id": "reply:tg:tawg:5311",
@@ -6916,7 +6979,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5311",
-    "updated_at": "2026-10-15T22:50:21.581336Z",
+    "updated_at": "2026-10-16T00:56:15.279062Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null

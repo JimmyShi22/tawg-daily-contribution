@@ -83,6 +83,7 @@ This vault compiles current, source-cited knowledge for the Daily Contribution a
 - [[acknowledgements/wiggle-giggle|Wiggle Giggle]]
 - [[acknowledgements/zexo|Zexo]]
 - [[acknowledgements/zidan|Zidan]]
+- [[acknowledgements/繁星之上-2|繁星之上]]
 - [[acknowledgements/繁星之上|繁星之上]]
 ## Timelines
 
