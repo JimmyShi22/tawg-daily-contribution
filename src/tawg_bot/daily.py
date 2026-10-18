@@ -438,7 +438,12 @@ class DailyService:
             self.privacy.assert_public(result.telegram_text)
         except PrivacyViolation:
             raise DailyRejected("Daily output failed privacy validation") from None
-        if _NON_ENGLISH_SCRIPT.search(result.telegram_text):
+        mention_labels = self._mention_labels(evidence)
+        language_text = result.telegram_text
+        for label in mention_labels.values():
+            if _NON_ENGLISH_SCRIPT.search(label):
+                language_text = language_text.replace(label, "")
+        if _NON_ENGLISH_SCRIPT.search(language_text):
             raise DailyRejected("Daily output must be English")
         if len(_EMOJI.findall(result.telegram_text)) > int(self.policy["max_emoji"]):
             raise DailyRejected("Daily output exceeds the emoji limit")
@@ -485,7 +490,6 @@ class DailyService:
                 raise DailyRejected("Daily output has an unexpected top-level section")
 
         allowed_citations = {item.citation for item in evidence}
-        mention_labels = self._mention_labels(evidence)
         highlights_lines = lines[
             section_indices["Highlights"] + 1 : section_indices["What moved"]
         ]
