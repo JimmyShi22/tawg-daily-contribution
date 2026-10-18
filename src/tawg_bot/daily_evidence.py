@@ -211,7 +211,7 @@ class GitHubActivityRecords:
             client=github,
             now=lambda: now,
         )
-        batch = await source.sync_activity_since(since)
+        batch = await source.sync_activity_since(since, until=now)
         if not batch.successful:
             raise DailyEvidenceRejected("GitHub Daily activity collection failed")
         proposal_records = (

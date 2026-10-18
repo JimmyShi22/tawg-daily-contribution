@@ -145,6 +145,60 @@ async def test_activity_sync_is_window_bounded_and_skips_repository_file_trees()
 
 
 @pytest.mark.asyncio
+async def test_activity_sync_passes_commit_until_boundary() -> None:
+    client = FakeGitHubClient()
+    source = GitHubSource.for_repository(root=ROOT, client=client, now=lambda: NOW)
+
+    await source.sync_activity_since(ACTIVITY_SINCE, until=NOW)
+
+    commit_calls = [
+        (path, params)
+        for path, params in client.calls
+        if path.endswith("/commits")
+    ]
+    assert commit_calls
+    assert all(params.get("until") == "2026-08-23T00:30:00Z" for _, params in commit_calls)
+
+
+@pytest.mark.asyncio
+async def test_activity_sync_handles_more_than_ten_commit_pages() -> None:
+    class ManyCommitsClient(FakeGitHubClient):
+        async def get_json(
+            self, path: str, params: dict[str, object] | None = None
+        ) -> list[Any] | dict[str, Any]:
+            query = params or {}
+            if path.endswith("/commits"):
+                self.calls.append((path, query))
+                page = int(query.get("page", 1))
+                if page > 11:
+                    return []
+                template = deepcopy(self.snapshot["commits"][0])
+                return [
+                    {
+                        **template,
+                        "sha": f"commit-{page}-{index}",
+                        "html_url": (
+                            "https://github.com/trustless-ai/agent-ercs/commit/"
+                            f"{page}-{index}"
+                        ),
+                    }
+                    for index in range(100)
+                ]
+            return await super().get_json(path, params)
+
+    client = ManyCommitsClient()
+    client.repositories = client.repositories[:1]
+    source = GitHubSource.for_repository(root=ROOT, client=client, now=lambda: NOW)
+
+    batch = await source.sync_activity_since(ACTIVITY_SINCE)
+
+    assert batch.successful
+    assert sum(
+        record.source_type is SourceType.GITHUB_COMMIT for record in batch.records
+    ) == 1_100
+
+
+@pytest.mark.asyncio
 async def test_activity_sync_stops_newest_first_streams_at_the_window_boundary() -> None:
     class OldHistoryClient(FakeGitHubClient):
         async def get_json(
