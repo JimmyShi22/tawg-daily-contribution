@@ -1132,6 +1132,27 @@
     "updated_at": "2026-10-14T23:00:21.665183Z"
   },
   {
+    "content_sha256": "9cfc29fb0f7df888bbb7aacafb5d359f2e3738b6455deff6ca16afa3e20f92a6",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "daily:2026-10-17T23:00:00Z",
+    "destination": "tawg",
+    "job_id": "daily:2026-10-17T23:00:00Z",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-18T16:12:34.854905Z",
+    "reply_text": "🗓 **TAWG Daily Catch-up**\n_2026-10-16 23:00 → 2026-10-17 23:00 UTC_\n\n## ⚡ **Highlights**\n\n> **ERC-8275 conformance suite opened** — a ten-vector proof kit with a stdlib checker and nine mutation controls shipped in PR #21, giving the group a concrete, chain-recomputable harness for verifyOutcome. [PR #21](https://github.com/trustless-ai/agent-ercs/pull/21)\n\n> **Execution audit confirmed 10/10 vectors** — after a semantic review, an independent same-session code run returned every vector passing, closing the loop between agreed semantics and working code. [tg:tawg:5570]\n\n> **Transfer-to-release binding refined in PR #22** — Merlini caught that Rule 3 needed to anchor a Transfer to the specific release it pays and opened a focused fix that folds into the existing suite. [PR #22](https://github.com/trustless-ai/agent-ercs/pull/22)\n\n## 🤝 **What moved**\n\n### ERC-8275\n\n_The verify-outcome conformance direction moved from a semantic forum post to a running, reviewed, and iteratively refined test suite within a single session._\n\n- Baby Blue Viper **Published** a structured vector framing on the Ethereum Magicians thread, turning the prior abstract statement into a concrete kit that anchored the session's implementation work. [ERC-8004 thread](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098/424)\n- 繁星之上 (@onthe_stars) **Confirmed** all four verifyOutcome semantic categories under ERC-8275, giving the group a validated normative foundation before any code shipped. [tg:tawg:5565]\n- Baby Blue Viper **Opened** PR #21 with ten pinned vectors, a stdlib checker, and nine mutation controls, converting the agreed semantics into a runnable conformance tool for the whole group. [tg:tawg:5568]\n- 繁星之上 (@onthe_stars) **Reviewed** PR #21 and confirmed the implementation faithfully matched the semantics pinned by the working group, providing an independent semantic check before merging. [tg:tawg:5569]\n- 繁星之上 (@onthe_stars) **Executed** the suite independently rather than relying on the PR's own output, returning 10/10 vectors and all mutation controls clean, making the results reproducible and auditable. [tg:tawg:5570]\n- Baby Blue Viper **Extended** PR #21 with a spec section on the off-chain/on-chain seam and a seventh vector for unreachable chainId or unretrieable receipt, keeping the suite complete as the design clarified. [tg:tawg:5571]\n- 繁星之上 (@onthe_stars) **Confirmed** the carrier framing for the seam is the right design call, noting that verifyOutcome must accept a carrier when historical receipt data is not readable on-chain. [tg:tawg:5572]\n- Baby Blue Viper **Closed** the initial vector set by describing how the seventh vector's mutation control handles the unreachable case, completing the scope of the suite. [tg:tawg:5564]\n- 繁星之上 (@onthe_stars) **Surfaced** the depth of Merlini's aggregation-level catch — Rule 3 as written is an existence check that a single aggregate event can satisfy for multiple releases — pointing the fix direction clearly. [tg:tawg:5579]\n- Merlini (@gobross) **Opened** PR #22 to bind each Transfer to the specific release it pays rather than to any release event, a precision fix that folds into PR #21 and sharpens the ERC-8275 conformance boundary. [PR #22](https://github.com/trustless-ai/agent-ercs/pull/22)\n- Baby Blue Viper **Reproduced** Merlini's PR #22 by independently checking out the commit and running the suite, turning the code review into execution evidence before approving. [PR #22 review](https://github.com/trustless-ai/agent-ercs/pull/22#pullrequestreview-5557153465)\n\n### cross-reference-console\n\n_The registry updated to reflect the session's new conformance artifacts._\n\n- The crc-watcher automated registry step updated the claims watermark after the conformance work landed, keeping the cross-reference console synchronized with the newly established artifacts. [commit 15d5e44](https://github.com/trustless-ai/cross-reference-console/commit/15d5e44e6dd4c3db325bcd8c74e45b5b97c2d8a9)\n\n## 🚀 **Next up**\n\n### 💡 **Ideas to follow**\n\n- Whether the carrier framing for the off-chain/on-chain seam warrants a dedicated normative section in the ERC-8275 spec text\n- Whether additional vectors are needed now that the Transfer-to-release binding is formalized\n\n### ✅ **TODOs**\n\n- Review and land the PR #22 Transfer-binding fix into PR #21 once the working group signs off\n- Validate that the mutation controls fully cover Rule 3's newly tightened scope after the binding change\n\n## 🤖 **Trusty's take**\n\n> **Today's spark:** A working-group semantic agreement, a shipped conformance suite, an independent semantic review, an execution audit, and a precision follow-up fix all completed within a single session — the group ran a full spec-to-verified-code loop without pausing between handoffs.\n>\n> When \"agreed\" becomes \"audited\" before the day is out, the relay is running at full speed — keep passing the baton! 🔥",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-18T16:12:34.854905Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5588
+    ],
+    "updated_at": "2026-10-18T16:12:34.854905Z"
+  },
+  {
     "content_sha256": "a466980af20249b60477ac2f3235c5ea85d2023ddef606a63eb3044863a8eea3",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "daily:preview-rich-v1:2026-08-27T23:00:00Z",
@@ -2854,6 +2875,27 @@
     "updated_at": "2026-10-01T09:55:11.918992Z"
   },
   {
+    "content_sha256": "f3444eb34a0736426d273032bd2b6fac7d3cfc40a2c60cb1ac0b7634ab3569ca",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:b49d7c1c8d59456d58461985",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:b49d7c1c8d59456d58461985",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-18T16:18:29.666504Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/agent-ercs](https://github.com/trustless-ai/agent-ercs)\n[#22 conformance: bind the Transfer to the release it pays \\(folds into #21\\)](https://github.com/trustless-ai/agent-ercs/pull/22)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-18T16:18:29.666504Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5590
+    ],
+    "updated_at": "2026-10-18T16:18:29.666504Z"
+  },
+  {
     "content_sha256": "b22117775f3edf6794a1a167d039a8b4d53b8dceb16bcf97f023506f1e3d64a1",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:b7a573ea6b2c1fa762303052",
@@ -3482,6 +3524,27 @@
       4846
     ],
     "updated_at": "2026-09-22T21:40:13.069825Z"
+  },
+  {
+    "content_sha256": "c340e95545b8487190b93def469e61349e5b2d906d279dd42a5f83385a5c9d69",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_opened:011ed880d11bac03b4df82b7",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_opened:011ed880d11bac03b4df82b7",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-18T16:18:29.666504Z",
+    "reply_text": "🆕 **New PR** in [trustless-ai/agent-ercs](https://github.com/trustless-ai/agent-ercs)\n[#21 conformance: verify\\_outcome.v0 — chain-recomputable proofs for ERC-8275 verifyOutcome](https://github.com/trustless-ai/agent-ercs/pull/21)\nOpened by [babyblueviper1](https://github.com/babyblueviper1)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-18T16:18:29.666504Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5589
+    ],
+    "updated_at": "2026-10-18T16:18:29.666504Z"
   },
   {
     "content_sha256": "86102b10a63b52815d73e46124c209893e0c76edc2809751fe9a7a1831cf971f",
