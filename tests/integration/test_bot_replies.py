@@ -4362,6 +4362,38 @@ async def test_failed_model_attempt_returns_job_to_retryable_pending_state(
 
 
 @pytest.mark.asyncio
+async def test_context_invalid_greeting_is_terminal_without_another_model_call(
+    tmp_path: Path,
+) -> None:
+    job = seed(tmp_path, "hello", trigger_kind=TriggerKind.GREETING_CANDIDATE)
+    jobs_path = tmp_path / "data/state/pending-bot-jobs.json"
+    persisted = json.loads(jobs_path.read_text(encoding="utf-8"))
+    persisted[0].update(
+        {
+            "status": "pending",
+            "attempts": 12,
+            "safe_error_code": "reply_route_context_invalid",
+            "classified_route": None,
+        }
+    )
+    jobs_path.write_text(json.dumps(persisted) + "\n", encoding="utf-8")
+    ai = ContextualFakeAi("refuse", reply_result(chinese=False))
+
+    prepared = await BotReplyService(
+        tmp_path,
+        ai=ai,
+        bot_username="bot",
+    ).prepare(job.job_id, now=NOW + timedelta(minutes=2))
+
+    assert prepared is None
+    assert ai.calls == []
+    terminal = json.loads(jobs_path.read_text(encoding="utf-8"))[0]
+    assert terminal["status"] == "cancelled"
+    assert terminal["classified_route"] is None
+    assert terminal["safe_error_code"] is None
+
+
+@pytest.mark.asyncio
 @pytest.mark.parametrize(
     ("message", "expected_code"),
     [

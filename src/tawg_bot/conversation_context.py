@@ -81,7 +81,7 @@ class ConversationContextBuilder:
                     )
                 selected.remove(removable)
                 omitted += 1
-            self.privacy.assert_public(text)
+            text = self.privacy.sanitize_public_value(text, parent_key=None)
         except PrivacyViolation:
             raise ConversationContextRejected(
                 "conversation context failed privacy validation"

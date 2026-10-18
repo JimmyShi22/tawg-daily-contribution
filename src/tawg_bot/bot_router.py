@@ -463,6 +463,12 @@ class BotReplyService:
         job = jobs.get(job_id)
         if job is None:
             raise ReplyRejected("unknown reply job")
+        if (
+            job.status is JobStatus.PENDING
+            and job.safe_error_code == "reply_route_context_invalid"
+        ):
+            self._discard_context_invalid_job(job, jobs, now)
+            return None
         if job.status is JobStatus.IGNORED:
             return None
         member_kinds = {
@@ -2471,6 +2477,37 @@ class BotReplyService:
         uow.register_external_evidence(())
         self._stage_jobs(uow, jobs)
         uow.publish()
+
+    def _discard_context_invalid_job(
+        self,
+        job: PendingBotJob,
+        jobs: dict[str, PendingBotJob],
+        now: datetime,
+    ) -> None:
+        terminal_status = JobStatus.CANCELLED
+        payload = job.model_dump(mode="json")
+        payload.update(
+            {
+                "status": terminal_status,
+                "prepared_reply_text": None,
+                "prepared_attachments": [],
+                "prepared_citations": [],
+                "prepared_language": None,
+                "refusal": False,
+                "safe_error_code": None,
+                "classified_route": None,
+                "router_context_scope": None,
+                "router_context_sha256": None,
+                "router_version": None,
+                "routed_at": None,
+                "verification_artifact": None,
+                "knowledge_mutation_paths": [],
+                "knowledge_mutation_trigger_sha256": None,
+                "updated_at": now,
+            }
+        )
+        jobs[job.job_id] = PendingBotJob.model_validate(payload)
+        self._publish_jobs(jobs, f"{job.job_id}:{terminal_status.value}")
 
     @staticmethod
     def _stage_jobs(uow: RepositoryUnitOfWork, jobs: Mapping[str, PendingBotJob]) -> None:
