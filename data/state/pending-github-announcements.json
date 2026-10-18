@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "TMerlini",
-    "event_id": "github-announcement:pr_merged:b49d7c1c8d59456d58461985",
-    "kind": "pr_merged",
-    "number": 22,
-    "occurred_at": "2026-10-17T09:07:56Z",
-    "repository": "trustless-ai/agent-ercs",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "conformance: bind the Transfer to the release it pays (folds into #21)"
   }
 ]
