@@ -569,6 +569,34 @@ async def test_daily_rejects_language_persona_and_evidence_policy_violations(
 
 
 @pytest.mark.asyncio
+async def test_daily_allows_non_latin_contributor_label_but_still_requires_english(
+    tmp_path: Path,
+) -> None:
+    _seed(tmp_path)
+    (tmp_path / "knowledge/meta/aliases.yml").write_text(
+        "schema: tawg.aliases.v1\n"
+        "scope: tawg-only\n"
+        "people:\n"
+        "  alice:\n"
+        "    display_names: [繁星之上]\n"
+        "    handles:\n"
+        "      telegram: [alice_tg]\n",
+        encoding="utf-8",
+    )
+    output = _fixture("daily-active")
+    output["telegram_text"] = output["telegram_text"].replace(
+        "- Alice", "- 繁星之上 (@alice_tg)", 1
+    )
+
+    prepared = await DailyService(tmp_path, ai=FakeAi(output)).prepare(
+        WINDOW, readiness=_ready(), evidence=_evidence(tmp_path)
+    )
+
+    assert prepared is not None
+    assert "繁星之上 (@alice_tg)" in prepared.telegram_text
+
+
+@pytest.mark.asyncio
 @pytest.mark.parametrize(
     ("mutation", "message"),
     [
