@@ -8,15 +8,5 @@
     "repository": "trustless-ai/trustless-ai-landing",
     "schema_version": "tawg.github-announcement.v1",
     "title": "semantic-abi: sequenced reveal layout (functional view preserved)"
-  },
-  {
-    "author_login": "babyblueviper1",
-    "event_id": "github-announcement:pr_updated:04cbf7a8dbde7324b9f0daee",
-    "kind": "pr_updated",
-    "number": 21,
-    "occurred_at": "2026-10-18T19:06:15Z",
-    "repository": "trustless-ai/agent-ercs",
-    "schema_version": "tawg.github-announcement.v1",
-    "title": "conformance: verify_outcome.v0 — chain-recomputable proofs for ERC-8275 verifyOutcome"
   }
 ]
