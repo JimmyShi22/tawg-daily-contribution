@@ -2875,6 +2875,25 @@
     "updated_at": "2026-10-01T09:55:11.918992Z"
   },
   {
+    "content_sha256": "f3444eb34a0736426d273032bd2b6fac7d3cfc40a2c60cb1ac0b7634ab3569ca",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_merged:b49d7c1c8d59456d58461985",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_merged:b49d7c1c8d59456d58461985",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-18T16:18:29.666504Z",
+    "reply_text": "🎉 **PR merged** in [trustless-ai/agent-ercs](https://github.com/trustless-ai/agent-ercs)\n[#22 conformance: bind the Transfer to the release it pays \\(folds into #21\\)](https://github.com/trustless-ai/agent-ercs/pull/22)\nCongratulations, [TMerlini](https://github.com/TMerlini)!",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": null,
+    "status": "prepared",
+    "telegram_chat_id": null,
+    "telegram_message_ids": [],
+    "updated_at": "2026-10-18T16:18:29.666504Z"
+  },
+  {
     "content_sha256": "b22117775f3edf6794a1a167d039a8b4d53b8dceb16bcf97f023506f1e3d64a1",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_merged:b7a573ea6b2c1fa762303052",
