@@ -5506,7 +5506,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 13246,
+    "attempts": 13247,
     "classified_route": null,
     "created_at": "2026-09-18T11:22:12.470949Z",
     "job_id": "reply:tg:tawg:4748",
@@ -5529,7 +5529,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:4748",
-    "updated_at": "2026-10-17T05:41:34.419145Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -5738,7 +5738,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 7860,
+    "attempts": 7861,
     "classified_route": null,
     "created_at": "2026-09-21T01:00:41.782265Z",
     "job_id": "reply:tg:tawg:4788",
@@ -5761,7 +5761,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:4788",
-    "updated_at": "2026-10-17T05:41:34.419145Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6579,7 +6579,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 3144,
+    "attempts": 3145,
     "classified_route": null,
     "created_at": "2026-10-01T01:53:20.272033Z",
     "job_id": "reply:tg:tawg:5082",
@@ -6602,13 +6602,13 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5082",
-    "updated_at": "2026-10-17T05:41:34.419145Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
   },
   {
-    "attempts": 2980,
+    "attempts": 2981,
     "classified_route": null,
     "created_at": "2026-10-01T14:52:14.936004Z",
     "job_id": "reply:tg:tawg:5113",
@@ -6631,7 +6631,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5113",
-    "updated_at": "2026-10-17T05:41:34.419145Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6695,7 +6695,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 2492,
+    "attempts": 2493,
     "classified_route": null,
     "created_at": "2026-10-03T06:35:21.705049Z",
     "job_id": "reply:tg:tawg:5168",
@@ -6718,7 +6718,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5168",
-    "updated_at": "2026-10-17T05:35:53.717570Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -6869,7 +6869,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 2053,
+    "attempts": 2054,
     "classified_route": null,
     "created_at": "2026-10-05T01:04:17.689781Z",
     "job_id": "reply:tg:tawg:5271",
@@ -6892,7 +6892,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5271",
-    "updated_at": "2026-10-17T05:35:53.717570Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
@@ -7043,7 +7043,7 @@
     "welcome_target_record_id": null
   },
   {
-    "attempts": 1523,
+    "attempts": 1524,
     "classified_route": null,
     "created_at": "2026-10-07T11:04:34.095174Z",
     "job_id": "reply:tg:tawg:5339",
@@ -7066,7 +7066,7 @@
     "status": "pending",
     "trigger_kind": "greeting_candidate",
     "trigger_record_id": "tg:tawg:5339",
-    "updated_at": "2026-10-17T05:35:53.717570Z",
+    "updated_at": "2026-10-18T16:18:29.666504Z",
     "verification_artifact": null,
     "welcome_target_person_id": null,
     "welcome_target_record_id": null
