@@ -9983,5 +9983,26 @@
       5532
     ],
     "updated_at": "2026-10-15T10:50:00.635302Z"
+  },
+  {
+    "content_sha256": "66e43f967268c7748217db4dd42f1e042a9fb699308d3b7f1c58d4bf06d3c394",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "reply:tg:tawg:5582",
+    "destination": "tawg",
+    "job_id": "reply:tg:tawg:5582",
+    "message_count": 1,
+    "message_thread_id": null,
+    "prepared_at": "2026-10-18T16:20:59.779175Z",
+    "reply_text": "Good morning, Pavlo! ☀️ Hope the day is off to a great start for you.",
+    "reply_to_message_id": 5582,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-18T16:20:59.779175Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5591
+    ],
+    "updated_at": "2026-10-18T16:20:59.779175Z"
   }
 ]
