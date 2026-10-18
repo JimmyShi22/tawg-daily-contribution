@@ -117,3 +117,30 @@ def test_reply_chain_cannot_cross_telegram_topic_boundary() -> None:
 
     assert context.record_ids == ("tg:tawg:201",)
     assert "Private context from another topic" not in context.text
+
+
+def test_routing_context_sanitizes_phone_like_table_values_instead_of_rejecting() -> None:
+    ordinary_prior = _record(
+        300,
+        "agent-attestations     302                      299\nRailway 413     413/413",
+        NOW,
+    )
+    trigger = _record(
+        301,
+        "@bot what changed",
+        NOW + timedelta(minutes=1),
+    )
+
+    context = ConversationContextBuilder(
+        PrivacyFilter.from_yaml(ROOT / "config/privacy.yml")
+    ).build(
+        trigger=trigger,
+        records=(ordinary_prior, trigger),
+        message_thread_id=7,
+        max_chars=64_000,
+        max_prior_records=100,
+    )
+
+    assert "[REDACTED_PHONE]" in context.text
+    assert "302" not in context.text
+    assert "299" not in context.text
