@@ -154,7 +154,7 @@ query TawgRecentDiscussionComments(
 }
 """
 
-_MAX_ACTIVITY_PAGES = 10
+_MAX_ACTIVITY_PAGES = 50
 _MAX_ACTIVITY_REQUESTS = 600
 
 
@@ -250,6 +250,7 @@ class GitHubSource:
         *,
         include_files: bool = True,
         activity_since: datetime | None = None,
+        activity_until: datetime | None = None,
         request_budget: _ActivityRequestBudget | None = None,
     ) -> GitHubBatch:
         if activity_since is not None and (
@@ -257,6 +258,11 @@ class GitHubSource:
             or activity_since.utcoffset() != UTC.utcoffset(activity_since)
         ):
             raise ValueError("GitHub activity cutoff must use UTC")
+        if activity_until is not None and (
+            activity_until.tzinfo is None
+            or activity_until.utcoffset() != UTC.utcoffset(activity_until)
+        ):
+            raise ValueError("GitHub activity until bound must use UTC")
         page_budget = _MAX_ACTIVITY_PAGES if activity_since is not None else None
         records: list[SourceRecord] = []
         updated_cursors = dict(cursors)
@@ -273,9 +279,12 @@ class GitHubSource:
                 records.extend(await self._collect_files(repository, branch_sha, branch_time))
                 updated_cursors["default_branch_sha"] = branch_sha
 
+        commit_params: dict[str, object] = {"sha": repository.default_branch}
+        if activity_until is not None:
+            commit_params["until"] = activity_until.isoformat().replace("+00:00", "Z")
         commits = await self._paginate(
             f"/repos/{repository.full_name}/commits",
-            self._since(cursors, "commits_since", {"sha": repository.default_branch}),
+            self._since(cursors, "commits_since", commit_params),
             max_pages=page_budget,
             request_budget=request_budget,
         )
@@ -403,10 +412,14 @@ class GitHubSource:
         )
 
     async def sync_activity_since(
-        self, since: datetime, *, max_concurrency: int = 4
+        self, since: datetime, *, until: datetime | None = None, max_concurrency: int = 4
     ) -> GitHubBatch:
         if since.tzinfo is None or since.utcoffset() != UTC.utcoffset(since):
             raise ValueError("GitHub activity cutoff must use UTC")
+        if until is not None and (
+            until.tzinfo is None or until.utcoffset() != UTC.utcoffset(until)
+        ):
+            raise ValueError("GitHub activity until bound must use UTC")
         if max_concurrency <= 0:
             raise ValueError("GitHub activity concurrency must be positive")
         request_budget = _ActivityRequestBudget(_MAX_ACTIVITY_REQUESTS)
@@ -432,6 +445,7 @@ class GitHubSource:
                         cursors,
                         include_files=False,
                         activity_since=since,
+                        activity_until=until,
                         request_budget=request_budget,
                     )
             except GitHubSourceError:
