@@ -5122,6 +5122,27 @@
     "updated_at": "2026-09-24T17:40:37.765999Z"
   },
   {
+    "content_sha256": "8ca632e22a7ea925674221879d9dd3e226a9d63cc2b6c66a16108b912560acca",
+    "delivery_format": "rich_markdown_v1",
+    "delivery_id": "github-announcement:pr_updated:04cbf7a8dbde7324b9f0daee",
+    "destination": "tawg",
+    "job_id": "github-announcement:pr_updated:04cbf7a8dbde7324b9f0daee",
+    "message_count": 1,
+    "message_thread_id": 3788,
+    "prepared_at": "2026-10-18T19:35:15.911682Z",
+    "reply_text": "🔄 **PR updated** in [trustless-ai/agent-ercs](https://github.com/trustless-ai/agent-ercs)\n[#21 conformance: verify\\_outcome.v0 — chain-recomputable proofs for ERC-8275 verifyOutcome](https://github.com/trustless-ai/agent-ercs/pull/21)\nNew commits from [babyblueviper1](https://github.com/babyblueviper1)",
+    "reply_to_message_id": null,
+    "safe_error_code": null,
+    "schema_version": "tawg.delivery-attempt.v1",
+    "sent_at": "2026-10-18T19:35:15.911682Z",
+    "status": "delivered",
+    "telegram_chat_id": -1004384669042,
+    "telegram_message_ids": [
+      5596
+    ],
+    "updated_at": "2026-10-18T19:35:15.911682Z"
+  },
+  {
     "content_sha256": "dd2b5a7fb6e598eb44e56f5cdd3d8d6cb8ea7c902a681da05706eccda90ae66f",
     "delivery_format": "rich_markdown_v1",
     "delivery_id": "github-announcement:pr_updated:08c6cce8e6f50077da3b0d81",
