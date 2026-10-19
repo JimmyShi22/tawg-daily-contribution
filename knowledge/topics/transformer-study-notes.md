@@ -12,6 +12,24 @@ provenance_status: legacy_incomplete
 
 A structured Q&A study guide built from an individual's complete learning journey through the Transformer architecture — from tokenization to backpropagation. Each section starts with a one-line quick answer, followed by a full explanation with formulas, worked numeric examples, and comparison tables.
 
+## How to use this document
+
+This is **not a self-contained introduction to the Transformer**. It is a companion notebook to read alongside the standard reference (the original "Attention Is All You Need" paper, LLaMA/DeepSeek docs, or a full textbook). The purpose is to surface the points that are usually glossed over or easy to get wrong — the exact spots where a first-time reader gets stuck — and explain them plainly, with worked numbers. Skim a chapter when you hit that concept in the main reference and find it unclear.
+
+**What each section covers:**
+
+- **01–02 Token & Embedding** — what a token is, how it becomes an integer ID and then a float vector; numeric precision (BF16/FP8) and memory cost.
+- **03 Positional encoding & vector math** — why order matters, learnable vs. sinusoidal vs. RoPE; dot product, linear vs. nonlinear ops.
+- **04–05 QKV & multi-head attention** — what Q/K/V really are, weighted sum vs. "picking one", K/V binding, dynamic vs. fixed weights, W_O, head splitting.
+- **06–07 LayerNorm & MLP** — what normalization does geometrically, where the nonlinearity lives, activation functions.
+- **08–09 Residuals & stacking** — shortcut paths, fork vs. merge gradients, why deep networks train at all, layer ordering.
+- **10 Training & scaling** — gradient descent vs. optimizers, Teacher Forcing, masking, EOS/padding, Chinchilla scaling laws.
+- **11 Inference (Prefill/Decode/KV Cache)** — the two generation phases, what gets cached and why it speeds up decode.
+- **12 Backpropagation & loss** — chain rule from the loss down to parameters, softmax+cross-entropy gradient, lm_head.
+- **13 Reflections** — emergent ability, distillation, the "point cloud" view of embeddings.
+- **14 MoE** — supplement on sparse mixture-of-experts (dense vs. activated params).
+- **15 Quick reference** — formula tables, comparison tables, common pitfalls, core numeric examples.
+
 ## 01 Token (the entry point)
 
 ### Question: What is a token?
@@ -230,7 +248,6 @@ The attention layer only uses: vector add/subtract, matrix multiplication, inner
 **Why does attention only use linear operations?** Linear ops are parallel-fast on GPU, easy to differentiate, and the inner product naturally measures direction similarity. **Where is the nonlinearity?** In the later **MLP (feed-forward network)** — through activations like ReLU/SwiGLU. **Without an activation function, stacking any number of linear layers is equivalent to a single matrix multiplication, making the model very weak.**
 
 > In one line: Attention (linear, finds token relationships) + MLP (nonlinear, extracts complex features) work together.
-
 ## 04 QKV Attention Mechanism
 
 ### Question: What are Q, K, and V? After the dot product, does V belong to K or to Q?
@@ -499,7 +516,6 @@ input x ∈ [T, d_model]
 - Dense model: MLP is a single feed-forward layer;
 - MoE model: **the MLP layer is replaced by multiple experts (MoE)**, the router selects top-k experts;
 - Attention (QKV) is always dense; only MLP is sparse (see §14).
-
 ## 08 Residual Connections
 
 ### Question: How many residual connections are there per Transformer layer?
@@ -793,7 +809,6 @@ optimal data D ≈ 20 × N  (model size in params)
 - GPT-3: 175B params / 300B tokens ≈ 1.7:1 (under-trained, far from optimal)
 
 > These are **empirical patterns, not mathematical theorems** — the real loss does not perfectly follow the power law, and emergent ability / saturation are the deviations (see §13).
-
 ## 11 Inference: Prefill, Decode, and KV Cache
 
 ### Question: What are prefill and decode?
@@ -1161,8 +1176,9 @@ The path of L1: T0 → Transformer → h₀ → lm_head → compute L1. This pat
 
 1. **The vectors computed separately per token (q/k/v vectors): intermediate temporary variables** — the L1 gradient can only reach the q/k/v vectors produced at T0, not those at T1/T2/T3;
 2. **Wq/Wk/Wv: model parameters, globally shared** — whether T0, T1, or T2 computes q/k/v, they all use this same set of weights. The L1 gradient updates this shared weight, and that modification affects all tokens' subsequent q/k/v computation.
-
 ## 13 Overall Reflections on the Transformer
+
+> This section collects the broader discussions: emergent ability, distillation, and the "point cloud" view. 精简回答见引用块；详细回答保留公式、数字例与对照。
 
 ### Question: What is emergent ability? Is it a "wake-up"?
 
@@ -1242,6 +1258,8 @@ Clarify:
 
 ## 14 MoE (Supplement · non-classical Transformer)
 
+> MoE does not belong to the classic Transformer; it is placed after the whole study as a supplement, and is also a direction for future expansion of this document.
+
 ### Question: Why put MoE as a supplement?
 
 > **In one line**: The classic Transformer is dense (one set of QKV, one MLP per layer; every token runs all parameters); MoE is a later architectural improvement that replaces the MLP with multiple experts and activates only a few — an "advanced" topic.
@@ -1270,10 +1288,10 @@ Example Mixtral-8x7B: total 46.7B, 2 experts per token, Active≈13B. Optimal ra
 
 ### Question: Are "active parameters" and "activation" the same thing?
 
-> **In one line**: No. Active parameters are the activated weight parameters (model weights); activation is the intermediate vector output by a matrix operation (data, not parameters).
+> **In one line**: No. Active parameters are the activated weight parameters (model weights); activation (激活值) is the intermediate vector output by a matrix operation (data, not parameters).
 
 - active **parameters**: the activated weight parameters (model weights involved in computation);
-- activation: the intermediate vector output by a matrix operation (data, not parameters).
+- activation (激活值): the intermediate vector output by a matrix operation (data, not parameters).
 
 ### Question: What is the difference between dense and MoE models?
 
