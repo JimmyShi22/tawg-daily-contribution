@@ -232,22 +232,27 @@ In attention: score_ij = Q_i·K_jᵀ, a large score = highly related, 0 = unrela
 
 ### Question: Why does attention only use linear operations? Where do other operations live?
 
-> **In one line**: The attention layer only uses linear operations (fast on GPU, easy derivatives, inner product naturally measures direction similarity); nonlinearity lives in the later MLP (activation functions).
+> **In one line**: The Q/K/V projections and the final weighted sum of V are linear; softmax inside attention is itself a nonlinear operation, and the MLP adds another nonlinearity via its activation function.
 
-The attention layer only uses: vector add/subtract, matrix multiplication, inner product — all **linear**. But vector operations are not limited to these:
+The attention layer is mostly linear: Q/K/V projections, the dot-product scores QKᵀ, and the final weighted sum of V are all linear operations (fast on GPU, easy to differentiate, inner product naturally measures direction similarity). **However, softmax is itself nonlinear** — it applies an exponential and a normalization. So attention is not "all linear"; it has a softmax nonlinearity in the middle. The later MLP adds a second nonlinearity through its activation functions.
 
 | Operation | Output | Use |
 |---|---|---|
 | Dot product (inner product) | scalar | QK scoring |
 | Matrix multiplication | vector | generating QKV |
 | Vector add/subtract | vector | embedding + positional encoding |
+| Weighted sum of V | vector | attention output (linear in V) |
 | Hadamard product (element-wise multiply) | vector | SwiGLU gating |
 | concat | longer vector | multi-head merge |
-| exponential/activation | vector | softmax, MLP |
+| exponential / softmax | vector | attention weights (nonlinear) |
+| activation (ReLU / SwiGLU) | vector | MLP hidden layer (nonlinear) |
 
-**Why does attention only use linear operations?** Linear ops are parallel-fast on GPU, easy to differentiate, and the inner product naturally measures direction similarity. **Where is the nonlinearity?** In the later **MLP (feed-forward network)** — through activations like ReLU/SwiGLU. **Without an activation function, stacking any number of linear layers is equivalent to a single matrix multiplication, making the model very weak.**
+**Why keep the linear parts linear?** Linear ops are parallel-fast on GPU, easy to differentiate, and the inner product naturally measures direction similarity. **Where is the nonlinearity?** In two places: (1) softmax inside attention, which turns raw scores into normalized weights; (2) the MLP's activation functions (ReLU/SwiGLU), which extract complex features. **Without any nonlinearity, stacking layers is equivalent to a single matrix multiplication, making the model very weak.**
 
-> In one line: Attention (linear, finds token relationships) + MLP (nonlinear, extracts complex features) work together.
+> In one line: Attention (linear QK scoring + weighted V, but with a softmax nonlinearity in between) + MLP (nonlinear activation, extracts complex features) work together.
+
+> **Note**: The linear part to pay attention to is the final weighted sum of V — `Out = Σ weight_i · V_i` is a linear combination. But the weights themselves come from softmax, which is nonlinear; and the QK dot-product scores are then fed through softmax before they reach V. So the only truly linear step in attention is the weighted sum of V given fixed weights.
+
 ## 04 QKV Attention Mechanism
 
 ### Question: What are Q, K, and V? After the dot product, does V belong to K or to Q?
@@ -292,9 +297,12 @@ Each position's output is a mixture of all V weighted by their attention — the
 
 ```
 Let Q = K = I (identity), V = diag(10, 20, 30)
-Then QKᵀ = identity, softmax leaves it unchanged
-→ Out = take each V directly: [10, 20, 30]
+Then QKᵀ = identity, scores for row 0 = [1, 0, 0]
+softmax([1, 0, 0]) = [e, 1, 1] / (e + 2) ≈ [0.576, 0.212, 0.212]
+→ Out₀ = 0.576·10 + 0.212·20 + 0.212·30 ≈ 16.4
 ```
+
+Note: softmax does **not** preserve the identity matrix — even when the raw score is [1,0,0], the weights are [0.576, 0.212, 0.212], not [1,0,0]. The diagonal just means the token's own V gets the largest weight; the other two still contribute.
 
 Change K to make attention "tilt":
 
@@ -424,19 +432,21 @@ This 4096 stays unchanged throughout the block (except the reshape in multi-head
 
 - Stacking many Transformer layers makes vector magnitudes grow ever larger or approach 0, causing gradient explosion/vanishing;
 - LN "standardizes" each vector: mean to 0, variance to 1 (with a small learnable gain/bias);
-- It is essentially translation + scaling of a single token's vector, without changing the inter-dimension ratio.
+- It normalizes each token's vector independently — it does not preserve angles or distances between tokens.
 
 ### Question: What is the plain-language explanation of LayerNorm?
 
-> **In one line**: Move the center of a set of points (a point cloud) to the origin, then spread them uniformly — without changing their relative positions, only the overall coordinate scale and location.
+> **In one line**: For each token's vector independently, shift its center to the origin and rescale to unit variance — a per-token standardization that stabilizes the numeric range, not a rigid geometric transform.
 
-Think of each token's vector as a point in high-dimensional space. LN moves these points' center to the origin and spreads them at a uniform scale. The relative positions (direction, distance) between points stay unchanged; only the overall coordinate scale and location change.
+Think of each token's vector as a point in high-dimensional space. LN takes each point independently, subtracts its own mean (moves its center to the origin), and divides by its own standard deviation (rescales). The point cloud's overall shape does change — relative angles and distances between tokens are not preserved, because each vector is normalized on its own. The purpose is to keep every vector in a similar numeric range so that deep stacking trains stably.
+
+> **Note**: The "point cloud" here is a loose analogy for intuition only. Strictly speaking, LN applied independently per token does distort the shape of the point cloud — angles and distances between tokens are not preserved. The analogy helps build intuition about "moving each vector to a standard position", but it should not be read as a rigid geometric transform.
 
 ### Question: Why can vectors still be added / residuals used after LN?
 
-> **In one line**: Because scaling does not break ratios — the semantic relations (direction, angle) between vectors stay unchanged, only a global scale, so LN outputs remain usable for attention, residuals, and addition.
+> **In one line**: Because LN outputs are still well-scaled vectors in the same dimension; residual addition requires matching dimensions, not preserved angles — the learnable gain/bias lets the model re-calibrate after normalization.
 
-Normalization does not destroy relations/ratios between vectors; it only globally scales and translates, so residual/addition after LN still holds.
+Normalization changes each vector's internal ratios, but it outputs a vector of the same dimension. Residual addition only requires two vectors to have the same shape; it does not require angles to be preserved. The learnable gain and bias let the model adjust back after normalization, so residual/addition after LN still works.
 
 ### Question: What is the mathematical form of LN?
 
@@ -460,13 +470,13 @@ For a vector x ∈ R^d:
 
 ## 07 MLP (Feed-Forward Network)
 
-### Question: Where exactly is the nonlinearity of attention?
+### Question: Where exactly is the nonlinearity?
 
-> **In one line**: The attention layer is entirely linear; the nonlinearity is in the MLP (feed-forward network), implemented through activation functions.
+> **In one line**: There are two nonlinearities — softmax inside attention, and the activation function inside the MLP. The linear parts (Q/K/V projections, weighted sum of V) stay linear.
 
-The attention layer is entirely linear (QK scoring, weighted sum); **the nonlinearity is in the MLP (feed-forward network)** — implemented through activation functions.
+The attention layer has two parts: the QK dot-product scores and the weighted sum of V are linear, but **softmax itself is nonlinear** (exponential + normalization). The MLP adds a second nonlinearity through its activation functions (ReLU / SwiGLU).
 
-> Without an activation function, stacking any number of linear layers is equivalent to a single matrix multiplication, making the model very weak.
+> Without any nonlinearity, stacking any number of linear layers is equivalent to a single matrix multiplication, making the model very weak.
 
 ### Question: Where does the MLP sit in the Transformer block?
 
@@ -1246,7 +1256,7 @@ Clarify:
 - Attention weighted sum = "mixing by similarity" within the point cloud;
 - Residual addition = vector translation/stacking in the point cloud;
 - MLP nonlinearity = nonlinear deformation of the point cloud;
-- LayerNorm = overall scaling/shift of the point cloud (move the cloud center to the origin).
+- LayerNorm = per-token standardization: each point is independently shifted to its own center and rescaled (the point cloud's shape does change; the purpose is numeric stability, not geometry preservation).
 
 ### Question: Is everything operations in a high-dimensional vector space?
 
@@ -1388,7 +1398,7 @@ Example Mixtral-8x7B: total 46.7B, 2 experts per token, Active≈13B. Optimal ra
 2. The model does not pre-store QKV — inference computes them on the fly (§04)
 3. Dot product can be negative; softmax weights always positive (§03)
 4. X=embedding+position is addition; RoPE is not added to X (§03)
-5. Attention is entirely linear; the nonlinearity is in the MLP (§07)
+5. Attention's QK scoring and weighted V are linear, but softmax is nonlinear; the MLP adds activation nonlinearity (§07)
 6. KV Cache stores only K/V, not Q/QK/embedding (§11)
 7. The cached V is the raw projected V, not the weighted output (§11)
 8. The residual adds the pre-LN raw x; two residuals per layer (§08)
