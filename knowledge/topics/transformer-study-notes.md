@@ -1322,6 +1322,89 @@ Example Mixtral-8x7B: total 46.7B, 2 experts per token, Active≈13B. Optimal ra
 - Expert parallelism, expert offloading, better routing, fine-grained/shared experts (DeepSeek) address the prefill problem;
 - See §11 (MoE with very long inputs activates almost all experts).
 
+### Question: What is the exact data flow inside one MoE layer?
+
+> **In one line**: LN → x_norm branches in parallel to the Gate (router) and to all experts; the Gate only outputs indices + weights, it does not forward the tensor to selected experts — unselected experts simply skip computation.
+
+In a Pre-LN Transformer block, after attention:
+
+```
+x_in (residual input)
+├─ residual branch: x_in passes through untouched
+└─ main branch:
+    1. LayerNorm → x_norm
+    2. x_norm fans out in parallel:
+       ├─ to Gate:   scores = softmax(W_g · x_norm) → pick top-K expert indices + weights
+       └─ to all N experts: each expert receives x_norm
+    3. Only the K selected experts actually run their MLP; the rest skip computation
+    4. y_moe = Σ (weight_i · Expert_i(x_norm))  over the K selected experts
+    5. x_out = x_in + y_moe
+```
+
+**Key point**: the Gate is not a switch that routes the tensor. It only outputs routing metadata (which experts, with what weights). The tensor is broadcast to all experts; unselected ones just do not execute their matrix multiplication.
+
+> **Note**: In GPU implementations this is done via token permutation — tokens routed to the same expert are batched together, and other tokens simply never enter that expert's compute.
+
+### Question: How does the Gate decide which experts to activate?
+
+> **In one line**: a small linear layer W_g scores x_norm → softmax → pick the top-K scores; those indices schedule which experts run, the weights weight their outputs.
+
+1. **Score**: `s = W_g · x_norm` → one score per expert, W_g shape is (hidden_dim → num_experts), very small.
+2. **Softmax**: `w_i = softmax(s)_i`, weights sum to 1.
+3. **Top-K selection**: keep the K largest weights and their expert indices; K is usually 2.
+4. **Output**: `y_moe = Σ_{i in topK} w_i · Expert_i(x_norm)`.
+
+The Gate's job is purely this routing decision; it does not modify or forward the input tensor.
+
+### Question: What are the main benefits of MoE?
+
+> **In one line**: decouple total parameter count from per-token compute; let different experts specialize on different token types; scale training across many GPUs.
+
+1. **Decouple capacity from compute**: a dense model that doubles params roughly doubles per-token FLOPs; MoE can have 8× experts but each token only runs 2× experts — much larger knowledge capacity at modest compute cost.
+2. **Expert specialization**: the Gate learns to route different token types to different experts (math, code, narrative, translation), so each expert only needs to learn a narrow pattern.
+3. **Training parallelism**: experts can be sharded across GPUs, scaling training beyond what a single dense model fits.
+
+**Costs**: all expert weights still live in memory (large VRAM); routing imbalance can overload one expert; the compute graph becomes data-dependent (different tokens take different paths).
+
+### Question: How are parameters distributed between experts and attention?
+
+> **In one line**: experts dominate — roughly 90%+ of total weights are in the MoE experts; attention (QKV + W_O) is only ~8% because it stays dense and does not grow with expert count.
+
+| Model type | Experts / MLP share | Attention (QKV+W_O) share |
+|---|---|---|
+| Dense LLaMA 7B | ~65% | ~30% |
+| Mixtral 8×7B MoE | ~92% | ~8% |
+| OLMoE | ~93% | ~3.9% |
+| DeepSeek V4-Pro | ~97% | ~12% |
+
+**Why**: QKV has a fixed size regardless of how many experts you add. All new parameters introduced by MoE go into the expert MLPs.
+
+> **Note**: this is model *weight* memory. At inference, long-context decode is often limited by **KV Cache** (which scales with sequence length, not total params) — a separate memory budget from the expert weights.
+
+### Question: How does backpropagation work in MoE?
+
+> **In one line**: only the K experts activated in the forward pass receive gradient and update; unselected experts get zero gradient from this token; the Gate always receives gradient.
+
+Forward: `y_moe = Σ_{i in active} w_i · Expert_i(x_norm)`.
+
+Backward from the loss:
+
+1. Gradient reaches `y_moe`, then splits: `∂L/∂y_i = w_i · ∂L/∂y_moe` for the K active experts.
+2. Each active expert runs normal MLP backprop and updates its own weights.
+3. Unselected experts: `∂L/∂y_j = 0` → no gradient, no update this step.
+4. The Gate (W_g) always receives gradient, because its weights `w_i` participated in the weighted sum — this includes both the main task loss and the auxiliary load-balancing loss.
+
+> **Note on the discrete top-K**: the top-K index selection itself is non-differentiable. In practice, gradients flow through the continuous softmax weights (Straight-Through Estimator) — the forward pass uses a hard pick, but backward uses the soft weights to train the Gate.
+
+### Question: What does "experts are independent" actually mean?
+
+> **In one line**: experts have separate weights (no sharing), but they are trained jointly in one global training run — the same loss, the same optimizer, just sparse per-token gradient updates.
+
+- **Independent = weights are separate**: Expert_1's W_1/W_2 are different tensors from Expert_2's; updating one does not touch the other.
+- **Not independently trained**: there is one global cross-entropy loss; all experts + Gate + Attention are in one model, optimized together.
+- Each token only updates the K experts it was routed to; different batches route different tokens to different experts, so over time every expert gets trained on the samples it specializes in.
+- The only coupling between experts is the shared Gate, which learns how to divide the work — plus the load-balancing loss that prevents all tokens from piling onto a few experts.
+
 ## 15 Quick Reference: Core Formulas and Common Pitfalls
 
 > This is the quick-reference appendix (not Q&A): formula tables, comparison tables, common-pitfall checklist, and core numeric examples. Section numbers correspond to the 15-chapter structure.
