@@ -842,6 +842,49 @@ Given a prompt, generation has two phases:
 
 So: prefill is parallel and "cheap per token", decode is serial and "expensive per token".
 
+### Question: What exactly is a hidden state, and where does it live during inference?
+
+> **In one line**: The hidden state is the per-token vector passed between layers — it is a temporary GPU tensor inside each layer's compute, not a cached artifact; only the final layer's hidden state is used to predict the next token.
+
+Think of the hidden state as the model's current "understanding" of each token as it moves through the stack:
+
+```
+token embedding  →  h⁽⁰⁾
+Layer 1:  LN → QKV → attention → residual → LN → MLP/MoE → residual  →  h⁽¹⁾
+Layer 2:  same pipeline on h⁽¹⁾                                       →  h⁽²⁾
+...
+Layer L:                                                              →  h⁽ᴸ⁾
+h⁽ᴸ⁾ of the last token  →  lm_head  →  logits  →  next token
+```
+
+Key facts:
+
+- **Lifecycle**: each layer reads the previous layer's hidden state, computes, and produces a new one; the old hidden state is discarded immediately after that layer finishes. It is not stored across layers or across decode steps.
+- **What it is used for inside a layer**: after LayerNorm, it is projected into Q, K, V. It is also the base for the residual connection.
+- **What is NOT cached**: hidden states are never written to KV Cache. KV Cache stores only the projected K and V tensors.
+- **Why earlier prompt tokens must run the full model in prefill**: their K and V (which later tokens attend to) are projected from their hidden states *after* MLP/MoE processing, not from raw embeddings. If earlier tokens skipped MLP, later tokens would attend to unprocessed "raw" vectors.
+
+> **Note**: KV Cache is a byproduct of prefill, not its purpose. Prefill's job is to fully process every prompt token so that the last token's hidden state is rich enough to predict the first generated token; KV Cache just keeps the K/V around for later reuse.
+
+### Question: What exactly is "parallel" in prefill? Is it per-token or per-layer?
+
+> **In one line**: Within one layer, all prompt tokens are processed as a batch (parallel); across layers, execution is strictly serial — layer l must finish all tokens before layer l+1 starts.
+
+The parallelism boundary is easy to get wrong:
+
+```
+Layer l:    [h₀, h₁, h₂, ..., hₙ₋₁]   ← whole batch, parallel on GPU
+            LN → QKV → attention → MoE/MLP → residual
+Layer l out: [h₀', h₁', h₂', ..., hₙ₋₁']   ← must finish ALL tokens first
+Layer l+1:  takes [h₀', h₁', h₂', ..., hₙ₋₁'] and repeats
+```
+
+- **Layer-internal parallelism**: all tokens in the batch share the same weight matrices; they are packed into big matrices and processed by GPU tensor cores at once. This is why prefill is throughput-friendly.
+- **Inter-layer serial dependency**: layer l+1 cannot start until layer l has produced outputs for every token. You cannot finish token 0 through all layers and then start token 1.
+- **Causal mask does not break parallelism**: it only restricts which positions can attend to which others; the whole batch still runs as one matrix operation.
+
+In decode, by contrast, each step feeds only one new token — there is no batch dimension to exploit, which is why decode is memory-bandwidth bound rather than compute bound.
+
 ### Question: What is KV Cache?
 
 > **In one line**: Caching the K and V computed for already-seen tokens to avoid recomputing them for every new token — the core acceleration technique for decoder inference.
